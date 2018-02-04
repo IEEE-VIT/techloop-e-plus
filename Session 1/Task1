@@ -1,0 +1,3 @@
+Task 1
+
+The Arduino Uno has only a few predefined PWM pins. Write code that would let you use PWM on any pin. Test out with an LED, motor or any analog output-requiring device of your choice.

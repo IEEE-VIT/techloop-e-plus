@@ -1,0 +1,7 @@
+Task 2
+
+Use an interrupt service routine to alternatively speed up or slow down the flashing of an led with a pushbutton. 
+
+
+HARD MODE
+Rewrite the code used on the robotic arm without delays.
