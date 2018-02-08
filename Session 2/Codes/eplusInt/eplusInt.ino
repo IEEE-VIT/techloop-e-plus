@@ -9,35 +9,17 @@ volatile int distance= 0;
 
 void echo()
 {
-  //This below method is inefficient as shown in session
-  /*  
-  if(a==0)
-  {
-    a = micros();
-  }
-  else
-  {
-    time = micros() - a;
-  }
-  */
-  //Below is efficient method
-  switch (digitalRead(ECHO))
-  {
-    case HIGH:  
-      b = 0;
-      a = micros();
-      break;
-      
-    case LOW: 
-      b = micros();
-      time = b - a; 
-      break;
-  }
-  
-  distance = time/58;
+   if (digitalRead(ECHO)==HIGH)
+   int lastButtonState = LOW;
+  int currentButtonState = digitalRead(buttonPin);
+  if (currentButtonState == HIGH && lastButtonState == LOW) {
+     // Switch the state of the output
+     digitalWrite(ledPin, !digitalRead(ledPin));
+     lastButtonState = currentButtonState;
+}
 }
 
-void trigger()
+void blink()
 {
   //a = 0; //for the inefficient method
   digitalWrite(TRIG, LOW);
@@ -56,6 +38,6 @@ void setup()
 
 void loop() 
 {
-trigger();
+blink();
 Serial.println(distance);
 }
