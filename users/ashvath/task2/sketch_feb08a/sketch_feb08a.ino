@@ -1,3 +1,4 @@
+//not completed
 const byte ledPin = 13;
 const byte interruptPin = 2;
 volatile byte state=LOW;
@@ -7,8 +8,9 @@ long time = 0;
 long debounce = 10;   
 
 void setup() {
- pinMode(ledPin, OUTPUT);
-  attachInterrupt(interruptPin, blink1, CHANGE);
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+  attachInterrupt(0, blink1, CHANGE);
 
 }
 
@@ -16,7 +18,7 @@ void loop() {
   if (state==LOW)
  {digitalWrite(ledPin, HIGH);
  delay(1000);
- digitalWrite(ledPin,LOW)}
+ digitalWrite(ledPin,LOW);}
  if (state==HIGH)
 { digitalWrite(ledPin,HIGH);
  delay(2000);
@@ -36,4 +38,5 @@ void blink1(){
     time = millis();    
   }
 previous = reading;
+Serial.print(state);
 }
