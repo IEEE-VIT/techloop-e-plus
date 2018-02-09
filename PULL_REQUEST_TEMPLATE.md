@@ -1,17 +1,13 @@
 # Include the fixes
 
-Description
--
--
-
-Changes proposed in the Pull Request
--
+## Description
 -
 
-Further doubts
--
+## Changes proposed in the Pull Request
 -
 
-How was your experince?
+## Further doubts
 -
+
+##How was your experience?
 -
