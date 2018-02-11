@@ -6,7 +6,7 @@ void setup()
 {
   pinMode(button,INPUT);
   pinMode(led,OUTPUT);
-  attachInterrupt(0,switcher,CHANGE);
+  attachInterrupt(0,switcher,HIGH);
 
 }
  void switcher()
@@ -19,6 +19,7 @@ void setup()
    {
      dl=100;
    }
+   delay(300);
  }
   void loop()
  {
