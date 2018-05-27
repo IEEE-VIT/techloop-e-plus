@@ -6,7 +6,7 @@ void setup()
 {
   pinMode(button,INPUT);
   pinMode(led,OUTPUT);
-  attachInterrupt(0,switcher,HIGH);
+  attachInterrupt(0,switcher,CHANGE);
 
 }
  void switcher()
