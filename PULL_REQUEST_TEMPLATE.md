@@ -4,7 +4,9 @@
 steps :-
 fork code from master repository 
 go to your own repository :p
-create a pull request after making edits
+edit code 
+type file name
+commit changes
 initiate a push request
 hit create
 Done!
